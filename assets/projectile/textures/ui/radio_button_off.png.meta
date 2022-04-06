@@ -1,0 +1,83 @@
+{
+  "ver": "1.0.22",
+  "importer": "image",
+  "imported": true,
+  "uuid": "bb3c3425-12b4-4c10-a168-f7eb2a1459da",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "ver": "1.0.21",
+      "importer": "texture",
+      "uuid": "bb3c3425-12b4-4c10-a168-f7eb2a1459da@6c48a",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "premultiplyAlpha": false,
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bb3c3425-12b4-4c10-a168-f7eb2a1459da"
+      },
+      "displayName": "radio_button_off",
+      "id": "6c48a",
+      "name": "texture"
+    },
+    "f9941": {
+      "ver": "1.0.9",
+      "importer": "sprite-frame",
+      "uuid": "bb3c3425-12b4-4c10-a168-f7eb2a1459da@f9941",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "premultiplyAlpha": false,
+        "generateMipmap": false,
+        "anisotropy": 1,
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 3,
+        "trimY": 3,
+        "width": 26,
+        "height": 26,
+        "rawWidth": 32,
+        "rawHeight": 32,
+        "borderTop": 13,
+        "borderBottom": 13,
+        "borderLeft": 13,
+        "borderRight": 13,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "bb3c3425-12b4-4c10-a168-f7eb2a1459da@6c48a",
+        "atlasUuid": "",
+        "mipfilter": "none",
+        "packable": true
+      },
+      "displayName": "radio_button_off",
+      "id": "f9941",
+      "name": "spriteFrame"
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "redirect": "bb3c3425-12b4-4c10-a168-f7eb2a1459da@f9941",
+    "hasAlpha": true
+  }
+}

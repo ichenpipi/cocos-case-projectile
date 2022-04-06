@@ -1,0 +1,25 @@
+{
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "CANNON"
+      },
+      {
+        "index": 2,
+        "name": "BULLET"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 5,
+      "1": 0,
+      "2": 5
+    }
+  },
+  "layer": [
+    {
+      "name": "USER_01",
+      "value": 1
+    }
+  ]
+}
