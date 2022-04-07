@@ -16,7 +16,7 @@
 
 ## 预览
 
-*在线预览：[https://ifaswind.gitee.io/cocos-case-projectile/](https://ifaswind.gitee.io/cocos-case-projectile/)*
+*在线预览：[https://app.chenpipi.cn/cocos-case-projectile/](https://app.chenpipi.cn/cocos-case-projectile/)*
 
 ![固定角度和速度](https://image.chenpipi.cn/repositories/cocos-case-projectile/cannon-fixed.gif)
 
