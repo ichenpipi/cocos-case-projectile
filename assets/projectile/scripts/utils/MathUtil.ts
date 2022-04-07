@@ -105,7 +105,7 @@ export class MathUtil {
      * @param currentVelocity 当前速度
      * @param smoothTime 平滑时间
      * @param maxSpeed 最大速度
-     * @param deltaTime 时间差值
+     * @param deltaTime 时间增量
      */
     public static smoothDamp(current: number, target: number, currentVelocity: number, smoothTime: number, maxSpeed?: number, deltaTime?: number) {
         maxSpeed = maxSpeed != undefined ? maxSpeed : Number.POSITIVE_INFINITY;

@@ -31,14 +31,14 @@ export class CameraController extends Component {
     protected touchSensitivity: number = 0.05;
 
     /**
-     * 当前距离
+     * 当前值
      */
-    protected currentDistance: number = 0;
+    protected currentValue: number = 0;
 
     /**
-     * 目标距离
+     * 目标值
      */
-    protected targetDistance: number = 0;
+    protected targetValue: number = 0;
 
     /**
      * 当前速度
@@ -111,20 +111,20 @@ export class CameraController extends Component {
         } else {
             distance = 8;
         }
-        this.setTargetDistance(distance);
+        this.setTarget(distance);
     }
 
     /**
-     * 鼠标回调
+     * 鼠标滚轮滚动回调
      * @param event 
      */
     protected onMouseWheel(event: EventMouse) {
         const scroll = event.getScrollY() * this.mouseSensitivity;
-        this.setTargetDistance(this.targetDistance - scroll);
+        this.setTarget(this.targetValue - scroll);
     }
 
     /**
-     * 触摸回调
+     * 触摸移动回调
      * @param event 
      */
     protected onTouchMove(event: EventTouch) {
@@ -136,13 +136,13 @@ export class CameraController extends Component {
         const touchesDistance = Vec2.distance(touches[0].getLocation(), touches[1].getLocation());
         if (this.lastTouchesDistance !== null) {
             const diff = (touchesDistance - this.lastTouchesDistance) * this.touchSensitivity;
-            this.setTargetDistance(this.targetDistance - diff);
+            this.setTarget(this.targetValue - diff);
         }
         this.lastTouchesDistance = touchesDistance;
     }
 
     /**
-     * 触摸回调
+     * 触摸结束回调
      * @param event 
      */
     protected onTouchEnd(event: EventTouch) {
@@ -154,34 +154,37 @@ export class CameraController extends Component {
      * @param dt 
      */
     protected update(dt: number) {
-        if (this.currentDistance === this.targetDistance) {
+        if (this.currentValue === this.targetValue) {
             return;
         }
         // 平滑插值
-        const current = MathUtil.smoothDamp(this.currentDistance, this.targetDistance, this.currentVelocity, this.smoothTime);
+        const current = MathUtil.smoothDamp(this.currentValue, this.targetValue, this.currentVelocity, this.smoothTime);
         // 更新速度
         this.currentVelocity = current.velocity;
         // 更新距离
-        this.setCurrentDistance(current.value);
+        this.setCurrent(current.value);
     }
 
     /**
-     * 设置摄像机当前距离
-     * @param value 
+     * 设置当前值
+     * @param value 值
      */
-    protected setCurrentDistance(value: number) {
+    protected setCurrent(value: number) {
+        // 根据距离计算相机坐标
         const direction = Vec3.subtract(this.tempVec3, this.cameraNode.getWorldPosition(), this.targetNode.getWorldPosition());
         direction.normalize().multiplyScalar(value);
         this.cameraNode.setWorldPosition(direction);
-        this.currentDistance = value;
+        // 记录当前值
+        this.currentValue = value;
     }
 
     /**
-     * 设置摄像机目标距离
-     * @param value 
+     * 设置目标值
+     * @param value 值
      */
-    public setTargetDistance(value: number) {
-        this.targetDistance = MathUtil.clamp(value, this.minDistance, this.maxDistance);
+    public setTarget(value: number) {
+        // 记录目标值
+        this.targetValue = MathUtil.clamp(value, this.minDistance, this.maxDistance);
     }
 
 }
