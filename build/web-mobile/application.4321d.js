@@ -8,20 +8,14 @@ System.register([], function (_export, _context) {
         fetchWasm = _ref.fetchWasm;
     // NOTE: before here we shall not import any module!
     var promise = Promise.resolve();
-    promise = promise.then(function () {
-      return topLevelImport('wait-for-ammo-instantiation');
-    }).then(function (_ref2) {
-      var waitForAmmoInstantiation = _ref2["default"];
-      return waitForAmmoInstantiation(fetchWasm(''));
-    });
     return promise.then(function () {
       return _defineProperty({
         start: start
       }, 'import', topLevelImport);
     });
 
-    function start(_ref4) {
-      var findCanvas = _ref4.findCanvas;
+    function start(_ref3) {
+      var findCanvas = _ref3.findCanvas;
       var settings;
       var cc;
       return Promise.resolve().then(function () {
@@ -102,7 +96,7 @@ System.register([], function (_export, _context) {
     }
 
     function loadSettingsJson(cc) {
-      var settings = 'src/settings.455a2.json';
+      var settings = 'src/settings.dc7d7.json';
       return new Promise(function (resolve, reject) {
         if (typeof fsUtils !== 'undefined' && !settings.startsWith('http')) {
           var result = fsUtils.readJsonSync(settings);
