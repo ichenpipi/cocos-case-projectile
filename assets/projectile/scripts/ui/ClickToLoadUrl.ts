@@ -10,7 +10,7 @@ const { ccclass, property } = _decorator;
 export class ClickToLoadUrl extends Component {
 
     @property({ multiline: true })
-    public url: string = 'https://gitee.com/ifaswind';
+    public url: string = '';
 
     @property({ tooltip: '是否使用新窗口打开' })
     public openInNewTap: boolean = true;
