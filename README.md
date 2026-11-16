@@ -4,11 +4,9 @@
 
 项目核心主题为抛射体运动（Projectile Motion）在游戏开发中的实践。
 
-开源仓库：[https://gitee.com/ifaswind/cocos-case-projectile](https://gitee.com/ifaswind/cocos-case-projectile)
+## 文章
 
-## 相关文章
-
-**《抛射体运动在游戏开发中的实践》**
+《抛射体运动在游戏开发中的实践》
 
 - 个人博客：[https://chenpipi.cn/post/projectile-motion-in-game-development/](https://chenpipi.cn/post/projectile-motion-in-game-development/)
 
@@ -16,7 +14,7 @@
 
 ## 预览
 
-*在线预览：[https://app.chenpipi.cn/cocos-case-projectile/](https://app.chenpipi.cn/cocos-case-projectile/)*
+在线预览：[https://ichenpipi.github.io/cocos-case-projectile/](https://ichenpipi.github.io/cocos-case-projectile/)
 
 ![固定角度和速度](https://image.chenpipi.cn/repositories/cocos-case-projectile/cannon-fixed.gif)
 
